@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vacanze in Sicilia per famiglie: strutture selezionate, prezzi verificati, prenotazione sicura con GB Viaggi tour operator. Preventivo gratuito in 10 minuti.">
+    <meta name="keywords" content="vacanze Sicilia famiglie, hotel bambini Sicilia, resort famiglia Sicilia, mare Sicilia bambini, vacanza Sicilia prezzi">
+    <meta property="og:title" content="Sicilia in Famiglia — Vacanze Sicilia per Famiglie">
+    <meta property="og:description" content="Strutture verificate per famiglie in Sicilia. Prenotazione sicura con GB Viaggi. Preventivo gratuito.">
+    <meta property="og:image" content="images/hero/hero-main.jpg">
+    <meta property="og:type" content="website">
+    <title>Vacanze Sicilia Famiglie | Sicilia in Famiglia — Strutture Selezionate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="images/icons/favicon.png">
+</head>
+<body>
+
+    <!-- MIGLIORAMENTO 7: Cookie Banner -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-content">
+            <p>Utilizziamo cookie tecnici per il funzionamento del sito. <a href="#">Privacy Policy</a></p>
+            <div class="cookie-buttons">
+                <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Accetta</button>
+                <button class="cookie-btn cookie-reject" onclick="rejectCookies()">Rifiuta</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MIGLIORAMENTO 6: Exit Intent Popup -->
+    <div class="exit-popup" id="exitPopup">
+        <div class="exit-popup-content">
+            <button class="exit-popup-close" onclick="closeExitPopup()">×</button>
+            <span class="exit-popup-badge">⏱️ Aspetta</span>
+            <h3>Stai per perdere la tua vacanza ideale</h3>
+            <p>Le strutture per famiglie si prenotano per prime. Ricevi il tuo preventivo personalizzato in <strong>10 minuti</strong>, senza impegno.</p>
+            <a href="https://wa.me/393331234567?text=Ciao%2C%20vorrei%20ricevere%20delle%20proposte%20per%20una%20vacanza%20in%20Sicilia." 
+               class="btn-primary" target="_blank" rel="noopener noreferrer" onclick="closeExitPopup()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Richiedi ora su WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <!-- Sticky CTA -->
+    <div class="sticky-cta" id="stickyCta">
+        <a href="https://wa.me/393331234567?text=Ciao%2C%20vorrei%20ricevere%20delle%20proposte%20per%20una%20vacanza%20in%20Sicilia.%0A%0APeriodo%3A%0APersone%20(adulti%20%2B%20bambini%20%2B%20et%C3%A0)%3A%0ABudget%20indicativo%3A%0ATipo%20di%20vacanza%3A%0AEsigenze%20particolari%3A" 
+           class="btn-sticky" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Ricevi proposte su WhatsApp
+        </a>
+    </div>
+
+    <!-- MIGLIORAMENTO 3: Smart Header -->
+    <nav class="navbar smart" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <img src="images/icons/logo-sicilia-famiglia.png" alt="Sicilia in Famiglia" class="logo">
+                <div class="nav-brand-text">
+                    <span class="nav-title">Sicilia in Famiglia</span>
+                    <span class="nav-subtitle">Vacanze Sicilia per famiglie</span>
+                </div>
+            </div>
+            <div class="nav-contact">
+                <a href="tel:+393331234567" class="nav-phone">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    +39 333 123 4567
+                </a>
+                <!-- MIGLIORAMENTO 9: Dark Mode Toggle -->
+                <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" aria-label="Cambia tema">
+                    <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                    <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MIGLIORAMENTO 2: Counter Urgenza -->
+    <div class="urgency-bar" id="urgencyBar">
+        <div class="urgency-content">
+            <span class="urgency-pulse"></span>
+            <span class="urgency-text"><strong id="urgencyCount">3</strong> famiglie hanno richiesto un preventivo oggi</span>
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <img src="images/hero/hero-main.jpg" alt="Vacanza in Sicilia per famiglie" class="hero-img">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-badge">Vacanze Sicilia 2026</span>
+                <h1 class="hero-title">
+                    La tua unica vacanza dell'anno<br>
+                    <em>non può essere quella sbagliata</em>
+                </h1>
+                <p class="hero-subtitle">
+                    Strutture selezionate per famiglie in Sicilia. Ci appoggiamo a <strong>GB Viaggi</strong>, 
+                    tour operator italiano che gestisce e garantisce direttamente il tuo soggiorno. 
+                    Tu non paghi a noi: la prenotazione e il pagamento avvengono con loro.
+                </p>
+
+                <!-- MIGLIORAMENTO 1: Form WhatsApp in pagina -->
+                <div class="hero-form" id="heroForm">
+                    <div class="form-row">
+                        <input type="text" id="formPeriodo" placeholder="Periodo (es. 10-17 Agosto)" class="form-input">
+                        <input type="text" id="formPersone" placeholder="Persone (adulti + bambini)" class="form-input">
+                    </div>
+                    <div class="form-row">
+                        <input type="text" id="formBudget" placeholder="Budget indicativo" class="form-input">
+                        <input type="text" id="formEsigenze" placeholder="Esigenze particolari" class="form-input">
+                    </div>
+                    <button class="btn-primary btn-full" onclick="sendWhatsAppForm()">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        Ricevi proposte gratis su WhatsApp
+                    </button>
+                </div>
+
+                <div class="hero-trust">
+                    <div class="trust-item">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        <span>Risposta in <strong>10 minuti</strong></span>
+                    </div>
+                    <div class="trust-item">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                        <span>Preventivo <strong>senza impegno</strong></span>
+                    </div>
+                    <div class="trust-item">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        <span>Pagamento a <strong>GB Viaggi</strong>, non a noi</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <a href="#perche-non-sbagli" class="scroll-indicator">
+                <span>Scopri</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- PERCHÉ NON SBAGLI -->
+    <section class="section section-dark" id="perche-non-sbagli">
+        <div class="container">
+            <div class="section-grid compact">
+                <div class="section-text">
+                    <span class="section-label">Il rischio</span>
+                    <h2 class="section-title">
+                        Non è una vacanza qualsiasi.<br>
+                        <em>È quella che non puoi sbagliare.</em>
+                    </h2>
+                    <p class="lead">Ore su portali con recensioni contrastanti. Quando viaggi con la famiglia, sbagliare struttura rovina tutto.</p>
+                    <div class="differentiator compact">
+                        <p><strong>Qui è diverso.</strong> Ti guidiamo, eviti errori e perdi meno tempo.</p>
+                    </div>
+                    <a href="https://wa.me/393331234567?text=Ciao%2C%20vorrei%20ricevere%20delle%20proposte%20per%20una%20vacanza%20in%20Sicilia." 
+                       class="btn-secondary" target="_blank" rel="noopener noreferrer">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        Scrivi su WhatsApp
+                    </a>
+                </div>
+                <div class="section-visual compact">
+                    <div class="image-card">
+                        <img src="images/hero/family-stress.jpg" alt="Ricerca vacanza stressante" class="card-img">
+                        <div class="card-caption"><span>✕</span> Ricerca caotica</div>
+                    </div>
+                    <div class="image-card card-offset">
+                        <img src="images/hero/family-happy.jpg" alt="Famiglia felice in vacanza Sicilia" class="card-img">
+                        <div class="card-caption card-caption-green"><span>✓</span> Vacanza perfetta</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COME FUNZIONA -->
+    <section class="section section-light" id="come-funziona">
+        <div class="container">
+            <div class="section-header center compact">
+                <span class="section-label">Come funziona</span>
+                <h2 class="section-title">Un messaggio. Al resto pensiamo noi.</h2>
+            </div>
+            <div class="steps-container compact">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">Dicci cosa cerchi</h3>
+                    <p class="step-desc">Periodo, persone, budget, esigenze. Basta un messaggio WhatsApp.</p>
+                </div>
+                <div class="step-connector">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#BE5423" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">Ricevi proposte verificate</h3>
+                    <p class="step-desc">2-3 opzioni su misura, selezionate tra le strutture di GB Viaggi.</p>
+                </div>
+                <div class="step-connector">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#BE5423" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">Prenoti con GB Viaggi</h3>
+                    <p class="step-desc">Pagamento e contratto direttamente con il tour operator. Assistenza inclusa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FIDUCIA -->
+    <section class="section section-trust" id="fiducia">
+        <div class="container">
+            <div class="section-header center compact">
+                <span class="section-label">Perché fidarsi</span>
+                <h2 class="section-title">Trasparenza e garanzia</h2>
+            </div>
+            <div class="trust-grid compact">
+                <div class="trust-card">
+                    <h3>Non paghi a noi</h3>
+                    <p>Il nostro servizio è gratuito. Prenoti e paghi direttamente con GB Viaggi, tour operator italiano.</p>
+                </div>
+                <div class="trust-card">
+                    <h3>Tour operator italiano</h3>
+                    <p>Ci appoggiamo a GB Viaggi, con sede legale in Italia. Tutela e garanzie nazionali.</p>
+                </div>
+                <div class="trust-card">
+                    <h3>Assistenza reale</h3>
+                    <p>Non un call center. Persone che ti seguono prima, durante e dopo.</p>
+                </div>
+                <div class="trust-card">
+                    <h3>Strutture per famiglie</h3>
+                    <p>Ogni struttura è verificata per le esigenze di chi viaggia con bambini.</p>
+                </div>
+                <div class="trust-card">
+                    <h3>Transfer ed esperienze</h3>
+                    <p>Transfer aeroportuali, escursioni e attività per completare la vacanza.</p>
+                </div>
+            </div>
+            <div class="trust-closing compact">
+                <p>Qui non stai "provando a prenotare".</p>
+                <p class="quote-highlight">Stai evitando di sbagliare.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- MIGLIORAMENTO 5: Gallery Destinazioni -->
+    <section class="section section-destinations" id="destinazioni">
+        <div class="container">
+            <div class="section-header center compact">
+                <span class="section-label">Destinazioni</span>
+                <h2 class="section-title">Le perle della Sicilia per le tue vacanze</h2>
+            </div>
+            <div class="destinations-grid">
+                <div class="destination-card" onclick="openDestination('cefalu')">
+                    <img src="images/destinations/cefalu.jpg" alt="Cefalù" class="destination-img">
+                    <div class="destination-overlay">
+                        <h3>Cefalù</h3>
+                        <p>Spiaggia, storia, famiglie</p>
+                        <span class="destination-price">Da €890/sett</span>
+                    </div>
+                </div>
+                <div class="destination-card" onclick="openDestination('taormina')">
+                    <img src="images/destinations/taormina.jpg" alt="Taormina" class="destination-img">
+                    <div class="destination-overlay">
+                        <h3>Taormina</h3>
+                        <p>Eleganza, mare, cultura</p>
+                        <span class="destination-price">Da €1.200/sett</span>
+                    </div>
+                </div>
+                <div class="destination-card" onclick="openDestination('sanvito')">
+                    <img src="images/destinations/san-vito.jpg" alt="San Vito Lo Capo" class="destination-img">
+                    <div class="destination-overlay">
+                        <h3>San Vito Lo Capo</h3>
+                        <p>Sabbia bianca, relax</p>
+                        <span class="destination-price">Da €750/sett</span>
+                    </div>
+                </div>
+                <div class="destination-card" onclick="openDestination('siracusa')">
+                    <img src="images/destinations/siracusa.jpg" alt="Siracusa" class="destination-img">
+                    <div class="destination-overlay">
+                        <h3>Siracusa</h3>
+                        <p>Barocco, mare cristallino</p>
+                        <span class="destination-price">Da €980/sett</span>
+                    </div>
+                </div>
+                <div class="destination-card" onclick="openDestination('palermo')">
+                    <img src="images/destinations/palermo.jpg" alt="Palermo" class="destination-img">
+                    <div class="destination-overlay">
+                        <h3>Palermo</h3>
+                        <p>Cultura, street food, mare</p>
+                        <span class="destination-price">Da €680/sett</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROVA SOCIALE -->
+    <section class="section section-social" id="prova-sociale">
+        <div class="container">
+            <div class="section-header center compact">
+                <span class="section-label">Recensioni</span>
+                <h2 class="section-title">Famiglie che hanno già scelto</h2>
+            </div>
+            <div class="social-content compact">
+                <p class="social-intro">Strutture e servizi gestiti da <strong>GB Viaggi</strong>, tour operator italiano con recensioni verificate.</p>
+                <div class="testimonials-grid compact">
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="images/testimonials/avatar-1.jpg" alt="Maria R." class="testimonial-avatar">
+                            <div class="testimonial-info">
+                                <span class="testimonial-name">Maria R.</span>
+                                <span class="testimonial-family">2 bambini, 6 e 9 anni</span>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">"Non avremmo trovato questo resort da soli. Hanno capito esattamente cosa cercavamo. Vacanza perfetta!"</p>
+                        <span class="testimonial-destination">Cefalù</span>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="images/testimonials/avatar-2.jpg" alt="Luca B." class="testimonial-avatar">
+                            <div class="testimonial-info">
+                                <span class="testimonial-name">Luca B.</span>
+                                <span class="testimonial-family">3 bambini, 4-12 anni</span>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">"Quando nostro figlio si è fatto male, ci hanno aiutato a trovare un medico in 20 minuti. Non ha prezzo."</p>
+                        <span class="testimonial-destination">Taormina</span>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="images/testimonials/avatar-3.jpg" alt="Giulia M." class="testimonial-avatar">
+                            <div class="testimonial-info">
+                                <span class="testimonial-name">Giulia M.</span>
+                                <span class="testimonial-family">1 bambino, 3 anni</span>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">"Prima volta in Sicilia con un bambino piccolo. Ci hanno guidato passo dopo passo. Torneremo!"</p>
+                        <span class="testimonial-destination">San Vito Lo Capo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MIGLIORAMENTO 4: FAQ Accordion -->
+    <section class="section section-faq" id="faq">
+        <div class="container">
+            <div class="section-header center compact">
+                <span class="section-label">Domande frequenti</span>
+                <h2 class="section-title">Tutto quello che devi sapere</h2>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Quanto costa il vostro servizio?</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Nulla. Il nostro servizio di selezione e consulenza è completamente gratuito. Prenoti e paghi direttamente con GB Viaggi, tour operator italiano. Noi non incassiamo soldi.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Come funziona il pagamento?</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Il contratto e il pagamento avvengono direttamente con GB Viaggi. Tu non paghi a noi. Ricevi fattura e garanzie dal tour operator, come in qualsiasi agenzia viaggi tradizionale.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Cosa include il preventivo?</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>2-3 proposte di strutture selezionate per le tue esigenze, con prezzi verificati, disponibilità reale e dettagli su servizi per famiglie (piscina, animazione, camere comunicanti, ecc.).</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Posso aggiungere transfer ed escursioni?</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sì, su richiesta. GB Viaggi organizza transfer aeroportuali, noleggio auto, escursioni guidate e attività per bambini. Tutto incluso nella stessa prenotazione.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Quanto tempo ho per decidere?</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Il preventivo è senza impegno e valido 7 giorni. Le strutture per famiglie si prenotano per prime: ti consigliamo di confermare entro 48 ore per non perdere la disponibilità.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHIUSURA -->
+    <section class="section section-closing" id="chiusura">
+        <div class="container">
+            <div class="closing-content">
+                <span class="closing-badge">Non aspettare</span>
+                <h2 class="section-title">
+                    Le strutture giuste ci sono.<br>
+                    <em>Basta arrivarci per prime.</em>
+                </h2>
+                <p class="closing-text">Le migliori strutture per famiglie vengono prenotate per prime. Ti aiutiamo a trovare la tua.</p>
+                <div class="closing-quote compact">
+                    <p>Non si tratta di trovare qualcosa.</p>
+                    <p class="quote-final">Si tratta di trovare <strong>la soluzione giusta</strong>.</p>
+                </div>
+                <div class="closing-cta">
+                    <a href="https://wa.me/393331234567?text=Ciao%2C%20vorrei%20ricevere%20delle%20proposte%20per%20una%20vacanza%20in%20Sicilia.%0A%0APeriodo%3A%0APersone%20(adulti%20%2B%20bambini%20%2B%20et%C3%A0)%3A%0ABudget%20indicativo%3A%0ATipo%20di%20vacanza%3A%0AEsigenze%20particolari%3A" 
+                       class="btn-primary btn-large" target="_blank" rel="noopener noreferrer">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        Scrivi ora su WhatsApp
+                    </a>
+                    <p class="cta-note">Risposta in 10 min · Preventivo gratuito · Senza impegno</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid compact">
+                <div class="footer-brand">
+                    <img src="images/icons/logo-sicilia-famiglia.png" alt="Sicilia in Famiglia" class="footer-logo">
+                    <p class="footer-tagline">Vacanze in Sicilia per famiglie</p>
+                    <div class="footer-contact">
+                        <a href="tel:+393331234567" class="footer-phone">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            +39 333 123 4567
+                        </a>
+                        <a href="mailto:info@siciliainfamiglia.it" class="footer-email">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            info@siciliainfamiglia.it
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Destinazioni</h4>
+                    <ul>
+                        <li><a href="#">Cefalù</a></li>
+                        <li><a href="#">Taormina</a></li>
+                        <li><a href="#">San Vito Lo Capo</a></li>
+                        <li><a href="#">Siracusa</a></li>
+                        <li><a href="#">Palermo</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Info</h4>
+                    <ul>
+                        <li><a href="#">Come funziona</a></li>
+                        <li><a href="#">Garanzie</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Termini</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Social</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                        <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+                        <a href="#" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Sicilia in Famiglia — P.IVA 12345678901</p>
+                <p class="footer-note">Servizio di selezione strutture. Prenotazione e pagamento gestiti da GB Viaggi, tour operator italiano.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MIGLIORAMENTO 10: Back to Top -->
+    <button class="back-to-top" id="backToTop" onclick="scrollToTop()" aria-label="Torna in alto">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
