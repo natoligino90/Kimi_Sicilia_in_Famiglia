@@ -1,5 +1,4 @@
 # Kimi_Sicilia_in_FamigliaMa# 🏖️ 
-GB Viaggi Sicilia - Landing Page
 
 Landing page ottimizzata per conversioni per il servizio di consulenza vacanze in Sicilia per famiglie.
 
