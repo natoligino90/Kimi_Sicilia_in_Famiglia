@@ -315,13 +315,13 @@ ul { list-style:none; }
 .guarantees-grid { 
     display:grid; 
     grid-template-columns:repeat(4,1fr); 
-    gap:20px; 
+    gap:14px; 
 }
 .guarantee-card {
     background:var(--bg-white);
     border:1px solid var(--border-light);
     border-radius:var(--radius-lg);
-    padding:32px 24px;
+    padding:24px 16px;
     text-align:center;
     transition:var(--transition);
     position:relative;
@@ -345,8 +345,8 @@ ul { list-style:none; }
     border-color:rgba(190,84,35,0.15); 
 }
 .guarantee-icon {
-    width:56px;
-    height:56px;
+    width:44px;
+    height:44px;
     background:var(--brand-soft);
     border-radius:50%;
     display:flex;
@@ -363,7 +363,7 @@ ul { list-style:none; }
 }
 .guarantee-card h3 { 
     font-family:var(--font-heading); 
-    font-size:1.15rem; 
+    font-size:1rem; 
     font-weight:600; 
     margin-bottom:8px; 
     color:var(--text-dark); 
