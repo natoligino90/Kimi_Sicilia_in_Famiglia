@@ -818,3 +818,6 @@ align-items: center;
         transition-duration: 0.01ms !important;
     }
 }
+.btn-hero {
+    padding: 18px 28px;
+}
